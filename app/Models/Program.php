@@ -10,5 +10,15 @@ class Program extends Model
     /** @use HasFactory<\Database\Factories\ProgramFactory> */
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'title',
+        'description',
+        'channel',
+        'category',
+        'is_watched',
+    ];
+
+    protected $casts = [
+        'is_watched' => 'boolean',
+    ];
 }
