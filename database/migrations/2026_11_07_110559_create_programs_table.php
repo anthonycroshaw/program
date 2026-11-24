@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description')->nullable();    
+            $table->text('description')->nullable();
             $table->string('channel')->nullable();
             $table->string('category')->nullable();
             $table->boolean('is_watched')->default(false);
